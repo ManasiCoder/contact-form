@@ -21,33 +21,44 @@
 
 <body>
 
-  Contact Us
+  <main>
+    <h1>Contact Us</h1>
 
-  First Name
-  This field is required
+    <form action="#">
+      <label for="first-name">First Name <span class="asterisk">*</span></label>
+      <input id="first-name" type="text" required />
+      <span>This field is required</span>
 
-  Last Name
-  This field is required
+      <label for="last-name">Last Name <span class="asterisk">*</span></label>
+      <input id="last-name" type="text" required />
+      <span>This field is required</span>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+      <label for="email">Email Address <span class="asterisk">*</span></label>
+      <input id="email" type="email" required />
+      <span>Please enter a valid email address</span>
+      <span>This field is required</span>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+      <label for="type-support">Query Type <span class="asterisk">*</span></label>
+      <input type="radio" name="type-support" id="general-enquiry" />
+      <label for="general-enquiry">General Enquiry</label>
+      <input type="radio" name="type-support" id="support-request" />
+      <label for="support-request">Support Request</label>
+      <span>Please select a query type</span>
 
-  Message
-  This field is required
+      <label for="message">Message <span class="asterisk">*</span></label>
+      <textarea name="" id="message"></textarea>
+      <span>This field is required</span>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+      <input type="checkbox" name="terms-team" id="terms-team" />
+      <label for="terms-team">I consent to being contacted by the team <span class="asterisk">*</span></label>
+      <span>To submit this form, please consent to being contacted</span>
 
-  Submit
+      <button type="submit">Submit</button>
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
+      Message Sent!
+      Thanks for completing the form. We'll be in touch soon!
+    </form>
+  </main>
 
   <script src="./assets/js/script.js"></script>
 

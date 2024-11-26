@@ -19,13 +19,20 @@ html {
 body {
   min-width: 100vw;
   min-height: 100vh;
+  padding: 3.2rem 1.6rem;
+  display: grid;
+  place-items: center;
   font-size: 1.6rem;
+  background-color: var(--green-lighter);
 }
 
+label,
 input {
   display: block;
   width: 100%;
 }
+
+
 
 p {
   line-height: 170%;

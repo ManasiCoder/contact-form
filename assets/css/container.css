@@ -1,0 +1,11 @@
+main {
+  padding: 2.4rem;
+  display: grid;
+  gap: 2.4rem;
+  border-radius: 1.2rem;
+  background-color: var(--white);
+
+  h1 {
+    color: var(--grey-darker);
+  }
+}
