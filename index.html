@@ -27,31 +27,31 @@
     <form action="#">
       <label for="first-name">First Name <span class="asterisk">*</span></label>
       <input id="first-name" type="text" required />
-      <span>This field is required</span>
+      <div class="text-error">This field is required</div>
 
       <label for="last-name">Last Name <span class="asterisk">*</span></label>
       <input id="last-name" type="text" required />
-      <span>This field is required</span>
+      <div class="text-error">This field is required</div>
 
       <label for="email">Email Address <span class="asterisk">*</span></label>
       <input id="email" type="email" required />
       <span>Please enter a valid email address</span>
-      <span>This field is required</span>
+      <div class="text-error">This field is required</div>
 
       <label for="type-support">Query Type <span class="asterisk">*</span></label>
       <input type="radio" name="type-support" id="general-enquiry" />
       <label for="general-enquiry">General Enquiry</label>
       <input type="radio" name="type-support" id="support-request" />
       <label for="support-request">Support Request</label>
-      <span>Please select a query type</span>
+      <div class="text-error">Please select a query type</div>
 
       <label for="message">Message <span class="asterisk">*</span></label>
       <textarea name="" id="message"></textarea>
-      <span>This field is required</span>
+      <div class="text-error">This field is required</div>
 
       <input type="checkbox" name="terms-team" id="terms-team" />
       <label for="terms-team">I consent to being contacted by the team <span class="asterisk">*</span></label>
-      <span>To submit this form, please consent to being contacted</span>
+      <div class="text-error">To submit this form, please consent to being contacted</div>
 
       <button type="submit">Submit</button>
 

@@ -1,0 +1,25 @@
+input,
+textarea {
+  display: block;
+  padding: 1.6rem;
+  border: 1px solid var(--grey-darker);
+  cursor: pointer;
+}
+
+input:focus,
+input:hover {
+  border-color: var(--green-medium);
+}
+
+input[type="radio"] {
+  accent-color: var(--red);
+  width: 20px;
+  height: 20px;
+}
+
+
+/* ERROR */
+
+.input-error {
+  border-color: var(--red);
+}

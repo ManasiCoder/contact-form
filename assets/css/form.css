@@ -1,9 +1,3 @@
-form {
-  
-
-  label {
-    span.asterisk {
-      color: var(--green-medium);
-    }
-  }
+.text-error {
+  color: var(--red);
 }
