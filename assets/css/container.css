@@ -1,4 +1,5 @@
 main {
+  max-width: 375px;
   padding: 2.4rem;
   display: grid;
   gap: 2.4rem;

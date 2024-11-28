@@ -1,8 +1,8 @@
 input,
 textarea {
+  width: 100%;
   display: block;
   padding: 1.6rem;
-  border: 1px solid var(--grey-darker);
   cursor: pointer;
 }
 
@@ -11,10 +11,11 @@ input:hover {
   border-color: var(--green-medium);
 }
 
-input[type="radio"] {
-  accent-color: var(--red);
-  width: 20px;
-  height: 20px;
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--green-medium);
+  width: 16px;
+  height: 16px;
 }
 
 
