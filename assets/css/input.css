@@ -18,6 +18,11 @@ input[type="checkbox"] {
   height: 16px;
 }
 
+textarea {
+  resize: none;
+  height: 300px;
+}
+
 
 /* ERROR */
 
