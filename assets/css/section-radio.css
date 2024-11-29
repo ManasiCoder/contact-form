@@ -1,0 +1,26 @@
+section.support-radio {
+  display: grid;
+
+  .flex-radio:has(input[type="radio"]:checked) {
+    border-color: var(--green-medium);
+    background-color: var(--green-lighter);
+  }
+  
+  .radio-container {
+    display: grid;
+    gap: 1.6rem;
+
+    .flex-radio {
+      padding-left: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+  
+      label {
+        padding: 1.6rem 0;
+        font-size: 1.6rem;
+        margin: 0;
+      }
+    }
+  }
+}

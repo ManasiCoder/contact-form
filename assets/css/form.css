@@ -3,51 +3,24 @@ form {
   gap: 2.4rem;
 }
 
-label {
-  font-size: 1.4rem;
-}
-
 input,
 textarea,
-div.flex-radio {
-  border: 1px solid var(--grey-darker);
+.flex-radio {
+  border: 1px solid var(--grey-medium);
   border-radius: 0.8rem;
 }
 
+span.asterisk {
+  font-weight: bold;
+  color: var(--grey-medium);
+}
+
 .text-error {
-  display: none;
   color: var(--red);
 }
 
-div.support-radio {
-  display: grid;
-  gap: 1.6rem;
-
-  div.general:has(input[type="radio"]:checked),
-  div.support:has(input[type="radio"]:checked) {
-    border-color: var(--green-medium);
-    background-color: var(--green-lighter);
-  }
-  
-
-  div.flex-radio {
-    padding-left: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1.2rem;
-
-    label {
-      width: 100%;
-      padding: 1.6rem 0;
-      font-size: 1.6rem;
-    }
-  }
-}
-
-div.terms {
-
-  div.flex-terms {
-    display: flex;
-    gap: 1.2rem;
-  }
+label {
+  width: 100%;
+  display: block;
+  margin-bottom: 1.2rem;
 }

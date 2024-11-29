@@ -7,7 +7,9 @@ textarea {
 }
 
 input:focus,
-input:hover {
+input:hover,
+textarea:hover,
+textarea:focus {
   border-color: var(--green-medium);
 }
 
@@ -20,7 +22,7 @@ input[type="checkbox"] {
 
 textarea {
   resize: none;
-  height: 300px;
+  height: 24rem;
 }
 
 

@@ -1,0 +1,19 @@
+section.terms {
+
+  .flex-terms {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+    }
+
+    label {
+      font-size: 1.6rem;
+      padding: 0.8rem 0;
+      margin: 0;
+    }
+  }
+}
