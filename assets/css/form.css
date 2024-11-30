@@ -16,7 +16,9 @@ span.asterisk {
 }
 
 .text-error {
+  display: none;
   color: var(--red);
+  margin-top: 1rem;
 }
 
 label {

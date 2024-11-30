@@ -42,7 +42,7 @@
       <section class="user-email">
         <label class="margin-bottom" for="email">Email Address <span class="asterisk">*</span></label>
         <input id="email" type="email" required />
-        <span>Please enter a valid email address</span>
+        <div class="text-error">Please enter a valid email address</div>
         <div class="text-error">This field is required</div>
       </section>
 
@@ -50,11 +50,11 @@
         <label class="margin-bottom" for="type-support">Query Type <span class="asterisk">*</span></label>
         <div class="radio-container">
           <div class="flex-radio">
-            <input type="radio" name="type-support" id="general-enquiry" />
+            <input type="radio" name="type-support" id="general-enquiry" required />
             <label for="general-enquiry">General Enquiry</label>
           </div>
           <div class="flex-radio">
-            <input type="radio" name="type-support" id="support-request" />
+            <input type="radio" name="type-support" id="support-request" required />
             <label for="support-request">Support Request</label>
           </div>
         </div>
@@ -63,13 +63,13 @@
 
       <section class="message-area">
         <label class="margin-bottom" for="message">Message <span class="asterisk">*</span></label>
-        <textarea name="" id="message"></textarea>
+        <textarea name="" id="message" required></textarea>
         <div class="text-error">This field is required</div>
       </section>
 
       <section class="terms">
         <div class="flex-terms">
-          <input type="checkbox" name="terms-team" id="terms-team" />
+          <input type="checkbox" name="terms-team" id="terms-team" required />
           <label for="terms-team">I consent to being contacted by the team <span class="asterisk">*</span></label>
         </div>
         <div class="text-error">To submit this form, please consent to being contacted</div>
