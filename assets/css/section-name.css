@@ -2,3 +2,9 @@ section.user-name {
   display: grid;
   gap: 2.4rem;
 }
+
+@media screen and (min-width: 1080px) {
+  section.user-name {
+    grid-template-columns: 1fr 1fr;
+  }
+}

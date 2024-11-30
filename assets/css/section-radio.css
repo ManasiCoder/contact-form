@@ -24,3 +24,11 @@ section.support-radio {
     }
   }
 }
+
+@media screen and (min-width: 1080px) {
+  section.support-radio {
+    .radio-container {
+      grid-template-columns:  1fr 1fr;
+    }
+  }
+}

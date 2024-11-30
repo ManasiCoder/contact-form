@@ -25,9 +25,14 @@ textarea {
   height: 24rem;
 }
 
-
 /* ERROR */
 
 .input-error {
   border-color: var(--red);
+}
+
+@media screen and (min-width: 1080px) {
+  textarea {
+    max-height: 10rem;
+  }
 }
