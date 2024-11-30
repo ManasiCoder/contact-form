@@ -6,6 +6,7 @@ button[type="submit"] {
   color: var(--white);
   background-color: var(--green-medium);
   border-radius: 0.6rem;
+  cursor: pointer;
 }
 
 button[type="submit"]:hover {
