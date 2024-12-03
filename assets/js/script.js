@@ -19,7 +19,7 @@ const errorTermsRequired = document.querySelector(".terms-required");
 const inputErrorMap = [
   { input: firstName, error: errorFisrtNameRequired },
   { input: lastName, error: errorLastNameRequired },
-  { input: email, error: errorEmailRequired },
+  { input: email, error: errorEmailRequired, invalid: errorEmailInvalid },
   { input: radioGeneral, error: errorRadioRequired },
   { input: radioSupport, error: errorRadioRequired },
   { input: message, error: errorMessageRequired },
@@ -29,24 +29,64 @@ const inputErrorMap = [
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   verifyInputsEmpty();
-})
+});
+
+email.addEventListener("invalid", (event) => {
+  event.preventDefault();
+})  
 
 function verifyInputsEmpty() {
   let hasError = false;
 
-  inputErrorMap.forEach(({ input, error }) => {
-    const isEmpty = input.value.trim() === "" || !isAnyRadioSelected();
+  inputErrorMap.forEach(({ input, error, invalid }) => {
+    let isEmpty = false;
+    let isInvalid = false;
 
+    /* Vefify input Values */
+    if (input.type === "radio") {
+      isEmpty = !isAnyRadioSelected();
+    } else if (input.type === "checkbox") {
+      isEmpty = !input.checked;
+    } else if (input.type === "email") {
+      isEmpty = input.value.trim() === "";
+      
+      if (!isEmpty) {
+        isInvalid = !isValidEmail(input.value);
+      }
+
+    } else {
+      isEmpty = input.value.trim() === "";
+    }
+
+    /* Active errors */ 
     if (isEmpty) {
       hasError = true;
       showError(error);
       input.classList.add("input-error");
-    }
-  })
 
-  if (!hasError) {
-    console.log("Success")
-  }
+    } else if (isInvalid && invalid) {
+      hasError = true;
+      showError(invalid);
+      input.classList.add("input-error");
+    }
+
+    /* Hide errors */
+    setTimeout(() => {
+      hideError(error);
+      input.classList.remove("input-error")
+    }, 3000);
+  })
+  
+
+  return !hasError;
+}
+
+
+/* FORMS FUNCTIONS */
+
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
 }
 
 function isAnyRadioSelected() {

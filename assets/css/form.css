@@ -1,6 +1,6 @@
 form {
   display: grid;
-  gap: 2.4rem;
+  gap: 2rem;
 }
 
 input,
@@ -20,7 +20,7 @@ span.asterisk {
 .text-error {
   display: none;
   color: var(--red);
-  margin-top: 1rem;
+  margin-top: 0.6rem;
 }
 
 label {
