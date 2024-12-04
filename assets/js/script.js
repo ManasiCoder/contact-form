@@ -53,6 +53,8 @@ function verifyInputsEmpty() {
     if (isEmpty) {
       hasError = true;
       showError(input, error, invalid);
+    } else {
+      hideError(input, error, invalid)
     }
   })
 }
@@ -60,4 +62,9 @@ function verifyInputsEmpty() {
 function showError(input, inputError, inputInvalid) {
   inputError.style.display = "block";
   input.classList.add("input-error");
+}
+
+function hideError(input, inputError, inputInvalid) {
+  inputError.style.display = "none";
+  input.classList.remove("input-error");
 }
