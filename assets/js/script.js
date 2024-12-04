@@ -29,6 +29,7 @@ const inputErrorMap = [
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   verifyInputsEmpty();
+  console.log("teste")
 });
 
 /* FUNCTIONS */
@@ -41,19 +42,22 @@ function verifyInputsEmpty() {
     let isEmpty = false;
     
     if (input.type === "radio") {
-      isEmpty = !isAnyRadioSelected()
+      isEmpty = !radioGeneral.checked || !radioSupport.checked;
     } else if (input.type === "checkbox") {
       isEmpty = !input.checked;
     } else {
       isEmpty = input.value.trim() === "";
     }
 
-
+    /* Input empty showError */
     if (isEmpty) {
       hasError = true;
-      showError(error);
-      input.classList.add("input-error");
+      showError(input, error, invalid);
     }
   })
 }
 
+function showError(input, inputError, inputInvalid) {
+  inputError.style.display = "block";
+  input.classList.add("input-error");
+}
