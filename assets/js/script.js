@@ -31,77 +31,29 @@ form.addEventListener("submit", (event) => {
   verifyInputsEmpty();
 });
 
-email.addEventListener("invalid", (event) => {
-  event.preventDefault();
-})  
+/* FUNCTIONS */
 
 function verifyInputsEmpty() {
   let hasError = false;
 
+  /* Verify each input */
   inputErrorMap.forEach(({ input, error, invalid }) => {
     let isEmpty = false;
-    let isInvalid = false;
-
-    /* Vefify input Values */
+    
     if (input.type === "radio") {
-      isEmpty = !isAnyRadioSelected();
+      isEmpty = !isAnyRadioSelected()
     } else if (input.type === "checkbox") {
       isEmpty = !input.checked;
-    } else if (input.type === "email") {
-      isEmpty = input.value.trim() === "";
-      
-      if (!isEmpty) {
-        isInvalid = !isValidEmail(input.value);
-      }
-
     } else {
       isEmpty = input.value.trim() === "";
     }
 
-    /* Active errors */ 
+
     if (isEmpty) {
       hasError = true;
       showError(error);
       input.classList.add("input-error");
-
-    } else if (isInvalid && invalid) {
-      hasError = true;
-      showError(invalid);
-      input.classList.add("input-error");
     }
-
-    /* Hide errors */
-    setTimeout(() => {
-      hideError(error);
-      input.classList.remove("input-error")
-    }, 3000);
   })
-  
-
-  return !hasError;
-}
-
-
-/* FORMS FUNCTIONS */
-
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
-
-function isAnyRadioSelected() {
-  return radioGeneral.checked || radioSupport.checked
-}
-
-function termChecked() {
-  return termsTeam.checked;
-}
-
-function showError(elementError) {
-  elementError.style.display = "block";
-}
-
-function hideError(elementError) {
-  elementError.style.display = "none";
 }
 
