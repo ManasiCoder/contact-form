@@ -42,7 +42,7 @@ function verifyInputsEmpty() {
     let isEmpty = false;
     
     if (input.type === "radio") {
-      isEmpty = !radioGeneral.checked || !radioSupport.checked;
+      isEmpty = !isAnyRadioSelected()
     } else if (input.type === "checkbox") {
       isEmpty = !input.checked;
     } else {
@@ -67,4 +67,8 @@ function showError(input, inputError, inputInvalid) {
 function hideError(input, inputError, inputInvalid) {
   inputError.style.display = "none";
   input.classList.remove("input-error");
+}
+
+function isAnyRadioSelected() {
+  return radioGeneral.checked || radioSupport.checked;
 }
